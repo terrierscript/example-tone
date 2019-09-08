@@ -9,17 +9,16 @@ const ToneContext = createContext({
 const TriggerAttackRelease = ({ note }) => {
   const { synth } = useContext(ToneContext)
   return (
-    <div>
-      <button
-        onClick={() => {
-          synth.triggerAttackRelease(note, "8n")
-        }}
-      >
-        {note}
-      </button>
-    </div>
+    <button
+      onClick={() => {
+        synth.triggerAttackRelease(note, "8n")
+      }}
+    >
+      {note}
+    </button>
   )
 }
+
 const App = () => {
   return (
     <div>
