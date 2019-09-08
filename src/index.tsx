@@ -8,8 +8,8 @@ const ToneContext = createContext({
 })
 
 const area = `
-"ccr ddb ddb ddr eeb eeb eer ffr ggb ggb ggr aab aab aar bbb bbb bbr"
-"ccw ccw ddw ddw ddw eew eew ffw ffw ggw ggw ggw aaw aaw aaw bbw bbw"
+  "ccr ddb ddb ddr eeb eeb eer ffr ggb ggb ggr aab aab aar bbb bbb bbr"
+  "ccw ccw ddw ddw ddw eew eew ffw ffw ggw ggw ggw aaw aaw aaw bbw bbw"
 `
 
 const Area = styled.div`
@@ -43,7 +43,7 @@ const extra = (x) => {
     case "w":
       return { top: true }
     case "b":
-      return { black: true }
+      return { black: true, bottom: true }
     case "r":
       return { bottom: true }
   }
@@ -82,9 +82,7 @@ const App = () => {
                 onClick={() => {
                   synth.triggerAttackRelease(note, "8n")
                 }}
-              >
-                {note}
-              </Area>
+              ></Area>
             )
           })
         )}
